@@ -9,6 +9,9 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface UserDao extends JpaRepository<User, Long>, JpaSpecificationExecutor<User> {
 
-    @Query(value = "select version()", nativeQuery = true)
+    @Query(value = "SELECT version()", nativeQuery = true)
     String selectVersion();
+
+    @Query(value = " SELECT H2VERSION()", nativeQuery = true)
+    String selectH2Version();
 }

@@ -7,10 +7,6 @@ import org.hibernate.resource.jdbc.spi.StatementInspector;
 public class MyJpaInterceptor implements StatementInspector {
     @Override
     public String inspect(String s) {
-
         return s;
-    }
-
-    private void exec(String table) {
     }
 }
